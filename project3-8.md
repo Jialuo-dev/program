@@ -1,0 +1,43 @@
+# program3-4
+example
+package helloword;
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+	public static void main(String[] args) {
+		//Generate a lottery number 
+		int lottery = (int)(Math.random()*100);
+		
+		//prompt the user to enter a guess
+		Scanner input = new Scanner (System.in);
+		System.out.print("Enter your lottery pick (two digits ):");
+		int guess = input.nextInt();
+		
+		//Get digits from lottery
+		int lotteryDigit1 = lottery/10;
+		int lotteryDight2 = lottery%10;
+		
+		//Get digits from guess 
+		int guessDigit1 = guess /10;
+		int guessDigit2 = guess % 10;
+		
+		System.out.println("The lottery number is"+lottery);
+		
+		//Check the guess 
+		if(guess == lottery)
+			System.out.println("Enter math: you win $10000");
+		else if (guessDigit2 == lotteryDigit1
+				&&guessDigit1 == lotteryDight2)
+			System.out.println("Math all digits :you win $3000");
+		else if (guessDigit1 == lotteryDigit1
+				||guessDigit1 == lotteryDight2
+				||guessDigit2 == lotteryDigit1
+				||guessDigit2 == lotteryDight2)
+			System.out.println("Math one digit: you win $1000");
+		else
+			System.out.println("Sorry ,no match");
+	}
+
+}
