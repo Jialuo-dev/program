@@ -2,7 +2,7 @@
 example
 
 public class CircleFromSimpleGeometricObject
-    extends SimpleGeometricObject
+    extends SimpleGeometricObject{
    private double radius;
 
 public CircleFromSimpleGeometricObject (){
